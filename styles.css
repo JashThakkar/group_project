@@ -3,7 +3,7 @@
    height: 300px;
 
    /* TODO: Add part of your solution here */
-   background-color: linear-gradient(to bottom right, forestgreen, darkgreen);
+   background: linear-gradient(to bottom right, forestgreen, darkgreen);
    
 }
 
