@@ -1,0 +1,336 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background: linear-gradient(120deg, #fff7fb, #f0f8ff);
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* === Color Palette === */
+:root {
+  --pink: #f28a9c;
+  --blue: #a8d0f0;
+  --cream: #fffaf2;
+  --page-edge: #f0e6dc;
+  --accent: #e65c7b;
+  --shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* === Header === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--pink);
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+/* === Card Grid (Homepage) === */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 8rem 2rem 5rem;
+  justify-items: center;
+}
+
+.card {
+  perspective: 1000px;
+  text-decoration: none;
+  width: 240px;
+  height: 300px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 5px 20px var(--shadow);
+}
+
+.card-front {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front h2 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card-back {
+  background: var(--blue);
+  color: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card-img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+/* === Footer === */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--pink);
+  color: white;
+  text-align: center;
+  padding: 0.8rem 0;
+  border-top: 2px solid white;
+  font-size: 0.9rem;
+  box-shadow: 0 -3px 10px var(--shadow);
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+/* === Recipe Page === */
+.recipe-page {
+  padding-top: 6rem;
+  background: linear-gradient(180deg, #fff, #f5f8ff);
+  color: #222;
+}
+
+/* === Recipe Banner === */
+.recipe-banner {
+  text-align: center;
+  padding: 2rem;
+  background: var(--blue);
+  color: #333;
+  border-radius: 12px;
+  margin: 2rem auto 1.5rem;
+  max-width: 900px;
+  box-shadow: 0 3px 12px var(--shadow);
+}
+
+.recipe-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.recipe-subtitle {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* === Notebook Layout === */
+.recipe-layout {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.notebook {
+  background: var(--cream);
+  width: 90%;
+  max-width: 900px;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  position: relative;
+  box-shadow:
+    inset 3px 0 10px rgba(0,0,0,0.05),
+    0 8px 25px var(--shadow);
+  border: 6px solid var(--page-edge);
+}
+
+/* Spiral Binding */
+
+
+/* === Ingredients Checklist === */
+.ingredients {
+  margin-bottom: 2rem;
+}
+
+.ingredients h2 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.ingredients label {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+  position: relative;
+  padding-left: 32px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.ingredients input[type="checkbox"] {
+  appearance: none;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.ingredients input[type="checkbox"]:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.ingredients input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  position: absolute;
+  top: -1px;
+  left: 4px;
+  font-size: 16px;
+}
+
+/* === Steps === */
+.steps h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.step {
+  background: #ffffff;
+  border-left: 6px solid var(--accent);
+  margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow);
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s forwards;
+}
+
+.step:nth-child(2) { animation-delay: 0.3s; }
+.step:nth-child(3) { animation-delay: 0.6s; }
+.step:nth-child(4) { animation-delay: 0.9s; }
+.step:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Recipe Image === */
+.recipe-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  box-shadow: 0 6px 20px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.recipe-img:hover {
+  transform: scale(1.02);
+}
+
+/* === Back Button === */
+.back-btn {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  transition: 0.3s;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+.back-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .notebook {
+    padding: 1.5rem;
+    border-width: 4px;
+  }
+
+  .ring {
+    width: 20px;
+    height: 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .recipe-banner {
+    margin: 1rem;
+    padding: 1.2rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
