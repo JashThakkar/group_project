@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recipe #1</title>
+  <title>Strawberry Shortcake - CodeCrumbs™</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="recipe-page">
   <!-- Header -->
-  <header class="header">
-    <h1>Recipe #1: Strawberry Shortcake</h1>
-    <a href="index.html" class="back-btn">← Back Home</a>
+  <header class="header recipe-header">
+    <div class="header-inner">
+      <a href="index.html" class="back-btn" aria-label="Back to recipes">← Back Home</a>
+      <h1 class="logo">Strawberry Shortcake</h1>
+    </div>
   </header>
 
   <!-- Recipe Banner -->
@@ -21,47 +23,143 @@
   </section>
 
   <main class="recipe-layout">
-    <div class="notebook">
-      <div class="spiral">
-        <div class="ring"></div><div class="ring"></div><div class="ring"></div>
-        <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+    <article class="notebook" role="article" aria-labelledby="recipe-title">
+
+      <div class="page-inner">
+        <section class="ingredients" aria-labelledby="ingredients-title">
+          <h2 id="ingredients-title">Ingredients 🧂</h2>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> 2¼ cups flour</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> ¼ cup sugar + ⅓ cup sugar + ¼ cup powered sugar</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> 1 tbsp baking powder</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> ¼ tsp salt</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> ½ cup butter</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> ¾ cup milk</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> 2 tsp vanilla extract</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> 1 egg</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> 6 cups strawberries</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> 1½ cups whipping cream</span>
+          </label>
+        </section>
+
+        <section class="steps" aria-labelledby="steps-title">
+          <h2 id="steps-title">Preparation</h2>
+
+          <div class="step">
+            <h3>Step 1</h3>
+            <p>Pre-heat your oven to 425 °F (220 °C). Grease an 8-inch cake pan with butter abd lightly dust with flour.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 2</h3>
+            <p>SLice the strawberries and toss them with 1/3 cup of sugar. Set aside.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 3</h3>
+            <p>Combine flour, 1/4 cup of white sugar, baking powder, and salt in a medium bowl; cut in butter with a pastry blender or two knives until mixture resembles coarse crumbs. Make a well in the center of mixture; add beaten egg, half-and-half, and 1 teaspoon vanilla.  Stir mixture until just combined and no dry spots remain, being careful not to overmix.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 4</h3>
+            <p>Spoon batter evenly into prepared cake pan. Bake in the preheated oven until a toothpick inserted into the cake comes out clean and top is golden brown, about 18 minutes. Let cool partially in cake pan, about 10 minutes. Flip cake onto a clean work surface.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 5</h3>
+            <p>Meanwhile, beat heavy cream, powdered sugar, and remaining 1 teaspoon vanilla with an electric mixer on medium-high speed until soft peaks form, about 3 minutes. Set aside.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 6</h3>
+            <p>Cut partially cooled cake in half horizontally, making 2 layers; set top layer aside. Drain reserved strawberries in a colander placed over a small bowl, reserving any juice. Brush strawberry juice evenly over top of bottom cake layer. Evenly arrange ½ of the drained strawberries over bottom layer of cake.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 7</h3>
+            <p>Spread ½ of whipped cream evenly over strawberries; place top cake layer over whipped cream. Top with remaining strawberries and whipped cream.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 8</h3>
+            <p>Enjoy!</p>
+          </div>
+        </section>
+
+        <figure class="final-photo">
+          <img src="https://www.allrecipes.com/thmb/hmfawRclnilGHITwXgn9CtIC0lA=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8201-strawberry-shortcake-ddmfs-5775-hero-3x4-47272b202c594de0a4221f3a7cab4087.jpg" alt="Final cake photo" class="recipe-img"/>
+          <figurecaption>Final presentation</figurecaption>
+        </figure>
+
+        <section class="nutrition" aria-labelledby="nutrition-title">
+          <h2 id="nutrition-title">Nutritional Facts (per serving):</h2>
+          <div class="bar">
+            <span style="--value:100%">Calories: 430</span>
+          </div>
+          <div class="bar">
+            <span style="--value:21%">Fat</span>
+          </div>
+          <div class="bar">
+            <span style="--value:55%">Carbs</span>
+          </div>
+          <div class="bar">
+            <span style="--value:7%">Protein</span>
+          </div>
+        </section>
       </div>
-
-      <section class="ingredients">
-        <h2>Ingredients</h2>
-        <label><input type="checkbox"> 2 cups flour</label>
-        <label><input type="checkbox"> 1 cup sugar</label>
-        <label><input type="checkbox"> 1 tsp vanilla extract</label>
-        <label><input type="checkbox"> 1½ cups strawberries</label>
-        <label><input type="checkbox"> Whipped cream</label>
-      </section>
-
-      <!-- Steps Section -->
-      <section class="steps">
-        <h3>Steps</h3>
-        <div class="step">
-          <h4>Step 1</h4>
-          <p>Pre-heat your oven to 350 °F (180 °C).</p>
-        </div>
-        <div class="step">
-          <h4>Step 2</h4>
-          <p>Mix flour, sugar, and butter until crumbly.</p>
-        </div>
-        <div class="step">
-          <h4>Step 3</h4>
-          <p>Pour the batter into a baking pan and bake for 30 minutes.</p>
-        </div>
-        <div class="step">
-          <h4>Step 4</h4>
-          <p>Slice and layer with fresh strawberries and whipped cream.</p>
-        </div>
-        <div class="step">
-          <h4>Step 5</h4>
-          <p>Serve and enjoy your delicious shortcake!</p>
-        </div>
-        <img src="images/strawberry-cake.jpg" alt="Final cake photo" class="recipe-img" />
-      </section>
-    </div>
+    </article>
   </main>
+
+  <footer class="footer">
+    <p>© 2025 CodeCrumbs™ | CSS-only Interaction Project</p>
+  </footer>
 </body>
 </html>
