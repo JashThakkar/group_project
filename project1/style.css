@@ -293,7 +293,7 @@ html, body {
 /* === Back Button === */
 .back-btn {
   text-decoration: none;
-  color: var(--accent);
+  color: white;
   font-weight: 600;
   border: 2px solid var(--accent);
   padding: 0.4rem 1rem;
