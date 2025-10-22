@@ -520,20 +520,100 @@ html, body {
   transform: scale(1.05);
 }
 
-/* ABOUT */
-.about-page {
-  padding-top: 50px;
-}
-
+/* === About Page Container and Card === */
 .about {
-  max-width: 700px;
-  margin: 2rem auto 5rem;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 6rem 1rem 3rem;
 }
 
-.g, .aboutfoot {
+.about-card {
+  background: var(--page);
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  max-width: 750px;
+  width: 100%;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-card h2 {
+  color: var(--accent1);
+  font-size: 1.5rem;
+  margin-top: 1.4rem;
+}
+
+.about-card h3 {
+  margin-top: 1.2rem;
+  color: var(--pink);
+}
+
+.about-card p, 
+.about-card ol {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.about-card a {
+  color: var(--accent1);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.about-card a:hover {
+  color: var(--pink);
+  text-decoration: underline;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: var(--page-edge);
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.recipe-links li {
+  margin-bottom: 0.5rem;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  background: var(--page);
+  border-left: 4px solid var(--accent1);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.recipe-links li {
+  margin: 0.4rem 0;
+  line-height: 1.5;
+}
+
+.about ol.recipe-links {
+  padding-left: 1.5rem;
+}
+
+.g {
   position: fixed;
 }
