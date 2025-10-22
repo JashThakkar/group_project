@@ -465,14 +465,11 @@ html, body {
 }
 
 /* ================= filter rules (hide non-matching) ================= */
-/* when a specific radio is checked, hide cards that do not match the class */
 #f-dessert:checked ~ .card-grid .card:not( .dessert),
 #f-meal:checked ~ .card-grid .card:not( .meal),
 #f-drink:checked ~ .card-grid .card:not( .drink) {
   display:none;
 }
-
-/* All shows everything by default via #f-all being checked */
 
 /* NUTRITION BARS */
 .nutrition .bar {
