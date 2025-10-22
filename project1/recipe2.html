@@ -3,69 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recipe #2</title>
+  <title>Creamy Alfredo Pasta - CodeCrumbs™</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="recipe-page">
   <!-- Header -->
-  <header class="header">
-    <h1>Recipe #2: Creamy Alfredo Pasta 🇮🇹</h1>
-    <a href="index.html" class="back-btn">← Back Home</a>
+  <header class="header recipe-header">
+    <div class="header-inner">
+      <a href="index.html" class="back-btn" aria-label="Back to recipes">← Back Home</a>
+      <h1 class="logo">Creamy Alfredo Pasta</h1>
+    </div>
   </header>
 
   <!-- Recipe Banner -->
   <section class="recipe-banner">
-    <h2 class="recipe-title">Creamy Alfredo Pasta</h2>
+    <h2 class="recipe-title">Creamy Alfredo Pasta 🍝</h2>
     <p class="recipe-subtitle">A meal that will have you wanting more!</p>
   </section>
 
   <main class="recipe-layout">
-    <div class="notebook">
-      <div class="spiral">
-        <div class="ring"></div><div class="ring"></div><div class="ring"></div>
-        <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+    <article class="notebook" role="article" aria-labelledby="recipe-title">
+
+      <div class="page-inner">
+        <section class="ingredients" aria-labelledby="ingredients-title">
+          <h2 id="ingredients-title">Ingredients 🧂</h2>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text">  1 LB Pasta (fettuccine)</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> ½ Cup Butter</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> 1 Cup Heavy Cream</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> 2 Cloves Garlic</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> ½ - 1 Cup Parmesan</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> ¾ cup milk</span>
+          </label>
+
+          <label class="chk">
+            <input type="checkbox">
+            <span class="box" aria-hidden="true"></span>
+            <span class="text"> Seasonings to taste (salt, pepper, etc)</span>
+          </label>
+        </section>
+
+        <section class="steps" aria-labelledby="steps-title">
+          <h2 id="steps-title">Preparation</h2>
+
+          <div class="step">
+            <h3>Step 1</h3>
+            <p>Add butter and heavy cream to a large pan and simmer on low heat for 2 minutes.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 2</h3>
+            <p>Add Garlic, seasonings, and Parmesan and wisk slowly until sauce is smooth.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 3</h3>
+            <p>Put pasta in a larger pan with slightly salted water covering it and let the water get to a boil on high heat.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 4</h3>
+            <p>In about 20 minutes the pasta should get soft, when this happends turn the heat off.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 5</h3>
+            <p>To serve place pasta on a plate and add sauce on top of the pasta.</p>
+          </div>
+
+          <div class="step">
+            <h3>Step 6</h3>
+            <p>Enjoy!</p>
+          </div>
+        </section>
+
+        <figure class="final-photo">
+          <img src="https://www.allrecipes.com/thmb/uhyjbhMrDwnrSC24augjHmfu-Sg=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/AR-23431-to-die-for-fettuccine-alfredo-DDMFS-beauty-3x4-b64d36c7ff314cb39774e261c5b18352.jpg" alt="Final cake photo" class="recipe-img"/>
+          <figurecaption>Final presentation</figurecaption>
+        </figure>
+
+        <section class="nutrition" aria-labelledby="nutrition-title">
+          <h2 id="nutrition-title">Nutritional Facts (per serving):</h2>
+          <div class="bar">
+            <span style="--value:100%">Calories: 964</span>
+          </div>
+          <div class="bar">
+            <span style="--value:21%">Fat: 61g</span>
+          </div>
+          <div class="bar">
+            <span style="--value:55%">Carbs: 84g</span>
+          </div>
+          <div class="bar">
+            <span style="--value:7%">Protein: 24g</span>
+          </div>
+        </section>
       </div>
-
-
-
-      <section class="ingredients">
-        <h2>Ingredients</h2>
-        <label><input type="checkbox"> 1 LB Pasta (fettuccine)</label>
-        <label><input type="checkbox"> 1 Cup Heavy Cream</label>
-        <label><input type="checkbox"> 1/2 Cup Butter</label>
-        <label><input type="checkbox"> 2 Cloves Garlic</label>
-        <label><input type="checkbox"> 1/2 - 1 Cup Parmesan</label>
-        <label><input type="checkbox"> 2 Cloves Garlic</label>
-        <label><input type="checkbox"> Seasonings to taste (salt, pepper, etc)</label>
-      </section>
-
-      <!-- Steps Section -->
-      <section class="steps">
-        <h3>Steps</h3>
-        <div class="step">
-          <h4>Step 1</h4>
-          <p>Add butter and heavy cream to a large pan and simmer on low heat for 2 minutes.</p>
-        </div>
-        <div class="step">
-          <h4>Step 2</h4>
-          <p>Add Garlic, seasonings, and Parmesan and wisk slowly until sauce is smooth.</p>
-        </div>
-        <div class="step">
-          <h4>Step 3</h4>
-          <p>Put pasta in a larger pan with slightly salted water covering it and let the water get to a boil on high heat.</p>
-        </div>
-        <div class="step">
-          <h4>Step 4</h4>
-          <p>In about 20 minutes the pasta should get soft, when this happends turn the heat off.</p>
-        </div>
-        <div class="step">
-          <h4>Step 5</h4>
-          <p>To serve place pasta on a plate and add sauce on top of the pasta.</p>
-        </div>
-        <img src="images/strawberry-cake.jpg" alt="Final cake photo" class="recipe-img" />
-      </section>
-    </div>
+    </article>
   </main>
+
+  <footer class="footer">
+    <p>© 2025 CodeCrumbs™ | CSS-only Interaction Project</p>
+  </footer>
 </body>
 </html>
